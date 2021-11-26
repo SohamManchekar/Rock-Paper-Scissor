@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(90deg, rgb(24, 15, 143),rgb(170, 57, 157)); background-blend-mode:overlay,overlay,overlay,normal;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    top: 0;
+    position: absolute;
+}
+.score-board{
+    width: 500px;
+    height: 80px;
+    border: 3px solid whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 110px;
+    position: absolute;
+}
+.badge{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.result{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 130px;
+}
+.result p{
+    font-size: 42px;
+    font-weight: 500;
+    font-family: italic;
+    color: white;
+    animation-duration: 1s;
+
+}
+.choices{
+    width: 800px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.choice{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid white;
+}
+.choice img{
+    width: 100%;
+    height: 100%;
+}
+.action-msg{
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+.restart{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    text-align: center;
+}
+.btn-res{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #c31432;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px){
+    .result{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        margin-top: 190px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .content{
+        width: 100%;
+        height: 100vh;
+    }
+    .header{
+        width: 100%;
+        height: 100px;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .score-board{
+        width: 500px;
+        height: 70px;
+        top: 90px;
+        position: absolute;
+    }
+    .badge{
+        margin-top: 10px;
+        font-size: 32px;
+}
+    .result{
+        margin-top: 90px;
+    }
+    .result p{
+        font-size: 30px;
+    }
+    .choices{
+        width: 600px;
+        margin-top: 20px;
+    }
+    .choice{
+        width: 150px;
+        height: 150px;
+    }
+    .action-msg{
+        width: 100%;
+        height: 50px;
+        font-size: 30px;
+        margin-top: 25px;
+    }
+    .btn-res{
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header{
+        width: 100%;
+        height: 60px;
+        font-size: 34px;
+        font-weight: 500;
+        top: 20px;
+        position: absolute;
+    }
+    .score-board{
+        width: 380px;
+        height: 60px;
+        top: 100px;
+        position: absolute;
+    }
+    .badge{
+        margin-top: 5px;
+        font-size: 26px;
+}
+    .result{
+        margin-top: 40px;
+    }
+    .result p{
+        font-size: 24px;
+    }
+    .choices{
+        width: 420px;
+        height: 120px;
+        margin-top: 15px;
+    }
+    .choice{
+        width: 110px;
+        height: 120px;
+    }
+    .action-msg{
+        width: 100%;
+        height: 50px;
+        font-size: 25px;
+        margin-top: 25px;
+    }
+    .btn-res{
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .header{
+        width: 100%;
+        height: 50px;
+        font-size: 30px;
+        font-weight: 500;
+        top: 15px;
+        position: absolute;
+    }
+    .score-board{
+        width: 300px;
+        height: 60px;
+        top: 80px;
+        position: absolute;
+    }
+    .badge{
+        margin-top: 15px;
+        font-size: 21px;
+        font-weight: 600;
+        margin-left: -5px;
+}
+    .result{
+        margin-top: 20px;
+    }
+    .result p{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .choices{
+        width: 320px;
+        height: 100px;
+        margin-top: 5px;
+    }
+    .choice{
+        width: 90px;
+        height: 100px;
+    }
+    .action-msg{
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    .btn-res{
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}

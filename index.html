@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQS4EC93dzMEyLd3g--jLrBoELFG4q6fkHg&usqp=CAU">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+   
+<div class="content">
+    <div class="header">
+        Rock Paper Scissor
+    </div>
+
+    <div class="score-board">
+        <div class="badge" id="user-label">User : <span id="userscore">0</span></div>
+        <div class="badge" id="computer-label">Computer :  <span id="computerscore">0</span></div>
+    </div>
+
+    <div class="result">
+        <p class="animate__backInDown">Start the Game</p>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="rock.png" alt="">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper.png" alt="">
+        </div>
+        <div class="choice" id="scissor">
+            <img src="scissors.png" alt="">
+        </div>
+    </div>
+
+   <div class="action-msg">
+       <p>Make your Move</p>
+   </div>
+
+   <div class="restart">
+       <button class="btn-res" id="res">Restart Again</button>
+   </div>
+
+   <!-- audio source files for game start -->
+   <audio src="rock.mp3" type="audio/mp3" id="r"></audio>
+   <audio src="paper.mp3" type="audio/mp3" id="p"></audio>
+   <audio src="scissor.mp3" type="audio/mp3" id="s"></audio>
+   <!-- audio source files for game start -->
+</div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
